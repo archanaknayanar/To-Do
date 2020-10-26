@@ -1,0 +1,135 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgba(175, 174, 174, 0.1);
+    font-family: 'Titillium Web', sans-serif;
+}
+/**************CONTAINER*********/
+.container {
+    padding: 10px;
+    width: 380px;
+    margin: 0 auto;
+}
+/**************HEADER************/
+.header {
+    width: 380px;
+    height: 200px;
+    background-image: url('sunrise.jpg');
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 15px 15px 0 0;
+    position: relative;
+}
+.clear {
+    width: 30px;
+    height: 30px;
+    color: #ffffff;
+    font-size: 22px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.clear i:hover {
+    cursor: pointer;
+    color: black;
+    transform: rotate(45deg);
+}
+#date {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 25px;
+    font-family: 'Titillium Web', sans-serif;
+    color: #fff;
+}
+/************CONTENT*********/
+.content {
+    position: relative;
+    width: 380px;
+    height: 350px;
+    max-height: 350px;
+    overflow: auto;
+    background-color: #ffffff;
+}
+.content ul {
+    padding: 0;
+    margin: 0;
+}
+.item {
+    list-style: none;
+    width: 380px;
+    height: 45px;
+    max-height: 45px;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.item i.co {
+    position: absolute;
+    left: 25px;
+    top: 15px;
+    font-size: 25px;
+    padding-left: 10px;
+}
+.item i.co:hover {
+    cursor: pointer;
+}
+.fa-check-circle {
+    color: rgb(8, 214, 8);
+}
+.item p.text {
+    position: absolute;
+    top: 12px;
+    left: 65px;
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    background-color: #fff;
+    max-width: 285px;
+}
+.linethrough {
+    color: black;
+    text-decoration: line-through;
+}
+.item i.de {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    padding-right: 10px;
+    font-size: 25px;
+}
+.item i.de:hover {
+    color: rgb(61, 57, 57);
+    cursor: pointer;
+}
+/**********ADD ITEM*********/
+.add-to-do {
+    position: absolute;
+    width: 360px;
+    height: 45px;
+    bottom: 10px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+
+}
+.add-to-do i {
+    position: absolute;
+    font-size: 35px;
+    padding-top: 8px;
+    padding-left: 5px;
+    color: rgb(52, 52, 202);
+}
+.add-to-do input{
+    position: absolute;
+    left: 50px;
+    height: 35px;
+    width: 310px;
+    padding-top: 8px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+} 
+.add-to-do input::placeholder{
+    color: rgb(83, 83, 199);
+}
