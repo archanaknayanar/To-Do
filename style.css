@@ -14,7 +14,7 @@ body {
 .header {
     width: 380px;
     height: 200px;
-    background-image: url('sunrise.jpg');
+    background-image: url('image/sunrise.jpg');
     background-position: center;
     background-size: 100%;
     background-repeat: no-repeat;
