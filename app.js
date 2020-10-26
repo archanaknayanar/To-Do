@@ -17,6 +17,35 @@ let LIST =[]
     ,done = false
     ,trash = false;
 
+//get item from local storage
+let data = localStorage.getItem("TODO");
+//check if data isn't empty
+if(data){
+    //if data isn't empty
+    LIST = JSON.parse(data);
+    id = LIST.length; // set id to the last one in list
+    loadLIST(LIST); // load list to UI
+}
+else{
+    //if data is empty
+    LIST = [];
+    id = 0;
+}
+
+//Load items to the user's UI
+function loadLIST(array){
+    array.forEach(function(item){
+        addToDo(item.name , item.id , item.done , item.trash);
+        
+    });
+}
+
+//clear the local storage using clear button
+clear.addEventListener("click" , function(){
+    localStorage.clear();
+    location.reload();
+});
+
 //Show today's date
 const today = new Date();
 const options = {weekday : "long" , month : "short" , day:"numeric"};
@@ -56,6 +85,9 @@ document.addEventListener("keyup", function(event){
                 trash : false
             });
 
+        //add item to local storage(must be written at everywhere we update the data)
+        localStorage.setItem("TODO", JSON.stringify(LIST));
+
             id++;
         }
         input.value = ""; //to clear the text entered from the placeholder
@@ -93,4 +125,7 @@ list.addEventListener("click",function(event){
     }else if(elementJob == "trash"){
         removeTodo(element);
     }
+
+    //add item to local storage(must be written at everywhere we update the data)
+    localStorage.setItem("TODO", JSON.stringify(LIST)); 
 });

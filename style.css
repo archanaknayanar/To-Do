@@ -32,7 +32,6 @@ body {
 }
 .clear i:hover {
     cursor: pointer;
-    color: black;
     transform: rotate(45deg);
 }
 #date {
